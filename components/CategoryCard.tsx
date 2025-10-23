@@ -1,11 +1,18 @@
-type Props = { icon: string; title: string; caption?: string };
+"use client";
+import React from "react";
 
-export default function CategoryCard({ icon, title, caption }: Props) {
+interface CategoryCardProps {
+  title: string;
+  desc: string;
+  icon: string;
+}
+
+export default function CategoryCard({ title, desc, icon }: CategoryCardProps) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition p-5">
-      <div className="text-2xl">{icon}</div>
-      <div className="mt-2 font-semibold">{title}</div>
-      {caption ? <div className="text-sm text-white/70">{caption}</div> : null}
+    <div className="p-6 bg-gray-900 rounded-2xl text-white shadow-md hover:shadow-lg transition cursor-pointer">
+      <div className="text-4xl mb-3">{icon}</div>
+      <h3 className="text-lg font-semibold mb-1">{title}</h3>
+      <p className="text-gray-400 text-sm">{desc}</p>
     </div>
   );
 }
