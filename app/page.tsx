@@ -3,7 +3,6 @@
 import Header from "@/components/Header";
 import CategoryCard from "@/components/CategoryCard";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
